@@ -32,6 +32,9 @@ validation, database access, caching, forms, routing, and other fundamental Next
 
 ## Screenshot
 
+<img width="1101" height="1070" alt="Screenshot 2026-08-27 at 4 49 04 PM" src="https://github.com/user-attachments/assets/aad3c9ff-048a-4285-a75d-1579041b6fc1" />
+
+
 ## Next.js Concepts Practiced
 
 - App Router
