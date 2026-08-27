@@ -44,10 +44,6 @@ export async function loginAction(state: LoginActionState, formData: FormData) {
     const isUsernameValid = username === process.env.LOGIN_USER;
     const isPasswordValid = await verifyPassword(password, process.env.LOGIN_PASS || "");
 
-    console.log(password);
-    console.log(process.env.LOGIN_PASS);
-    console.log(isPasswordValid);
-
     if (!isUsernameValid || !isPasswordValid) {
         return {
             username,
