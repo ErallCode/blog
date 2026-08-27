@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Blog
+
+Next.js Blog is a Next.js + TypeScript project created during a Next.js concepts training.
+
+The project was developed as a practical exercise to understand how the main Next.js concepts work together in a real
+application. It includes a public blog and an admin area for managing posts.
+
+## About the Project
+
+The application implements a simple blog platform where users can browse published posts and an authenticated
+administrator can manage the content.
+
+With the application, users can:
+
+- View published blog posts
+- Open individual posts
+- View featured posts
+
+Administrators can:
+
+- Log in to the admin area
+- Create posts
+- Edit existing posts
+- Delete posts
+- Publish or unpublish posts
+- Write post content using Markdown
+- Upload cover images
+- Manage post titles, authors, excerpts, and content
+
+The project was a practical exercise covering Server Components, Client Components, Server Actions, authentication,
+validation, database access, caching, forms, routing, and other fundamental Next.js concepts.
+
+## Screenshot
+
+## Next.js Concepts Practiced
+
+- App Router
+- Server Components
+- Client Components
+- Server Actions
+- Dynamic routes
+- Forms and form actions
+- `useActionState`
+- `useTransition`
+- Authentication
+- Cookies
+- JWT
+- Data validation
+- Cache revalidation
+- Environment variables
+- Image handling
+- Error handling
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Drizzle ORM
+- Zod
+- JWT
+- bcrypt
+- React Toastify
+- Lucide React
+- Markdown
+- sanitize-html
+
+## Authentication
+
+The application includes a protected admin area.
+
+Authentication uses:
+
+- Username and password
+- Password hashing
+- JWT session tokens
+- HTTP cookies
+- Protected Server Actions
+
+Only authenticated users can create, update, delete, and manage posts.
+
+## Post Management
+
+The admin area provides CRUD operations for blog posts.
+
+Each post contains:
+
+- Title
+- Slug
+- Author
+- Excerpt
+- Content
+- Cover image
+- Published status
+- Creation date
+- Update date
+
+Post data is validated with Zod before being persisted.
+
+## Image Upload
+
+Administrators can upload cover images directly through the post management interface.
+
+The application validates:
+
+- File type
+- Maximum file size
+- Authentication
+
+Uploaded images are stored in the configured upload directory.
+
+## Database
+
+The project uses Drizzle ORM for database access.
+
+The repository layer separates the application logic from the persistence implementation and provides operations for:
+
+- Finding published posts
+- Finding posts by ID or slug
+- Creating posts
+- Updating posts
+- Deleting posts
+
+A JSON repository implementation is also available for local or alternative persistence.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create your environment configuration based on the project requirements.
 
-## Learn More
+The application uses environment variables for:
 
-To learn more about Next.js, take a look at the following resources:
+- Database query delay simulation
+- Image upload size
+- Image upload directory
+- Image server URL
+- JWT secret
+- Login expiration
+- Login cookie name
+- Admin username
+- Admin password hash
+- Login availability
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project was built with Next.js using the App Router.
 
-## Deploy on Vercel
+For more information, see the official Next.js documentation:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://nextjs.org/docs

@@ -1,8 +1,8 @@
 import { hashPassword } from "@/lib/login/password-hashing";
 
 (async () => {
-    const minhaSenha = "1234"; // NÃO ESQUECER DE APAGAR SUA SENHA DAQUI
-    const hashDaSuaSenhaEmBase64 = await hashPassword(minhaSenha);
+    const myPassword = "1234"; // DON'T FORGET TO DELETE YOUR PASSWORD FROM HERE
+    const passwordHashInBase64 = await hashPassword(myPassword);
 
-    console.log({ hashDaSuaSenhaEmBase64 });
+    console.log({ passwordHashInBase64 });
 })();
